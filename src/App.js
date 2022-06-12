@@ -22,6 +22,7 @@ const App = () => {
                 type='button' 
                 className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' 
                 style={{background: 'blue', borderRadius: '50%'}}
+                
               >
                 <FiSettings />
               </button>
@@ -44,13 +45,12 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-          </div>
 
           <div>
             <Routes>
               {/* Dashboard */}
               <Route path='/' element="ECommerce" />
-              <Route path='/ecommerce' element="ECommerce" />
+              <Route path='/ecommerce' element={<Ecommerce />} />
 
               {/* Pages */}
 
@@ -77,7 +77,7 @@ const App = () => {
 
             </Routes>
           </div>
-         
+        </div> 
         </div>
       </BrowserRouter>
     </div>
